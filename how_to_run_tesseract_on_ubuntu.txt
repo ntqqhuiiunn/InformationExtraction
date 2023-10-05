@@ -1,0 +1,15 @@
+# How to run Tesseract on Ubuntu
+# Step 1: Install Tesseract
+$ sudo apt install tesseract-ocr -y
+$ sudo apt install imagemagick
+# Step 2: Move .traineddata to 'tessdata' folder
+# Note: System can deny your permission, so let follow the steps:
+----------------------------
+# Upload .traineddata to other directory 
+# Run the command line:
+$ sudo mv {'.traineddata' file} {path to the 'tessdata' folder}
+# Step 3: Run Tesseract by using module 'subprocess'
+import subprocess
+cmd_str = "tesseract {path to image} {path to text file} -l {name of '.traineddata' file}"
+subprocess.run(cmd_str, shell= True)
+

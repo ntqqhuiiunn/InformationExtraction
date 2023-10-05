@@ -1,0 +1,4 @@
+1, Nếu hiển thị lỗi: "Permission denied: ...":
+Kiểm trả: os.access(đường dẫn, os.X_OK) nếu trả về false thì làm theo bước sau:
+Nguyên nhân: do file trong phần đường dẫn bị từ chối cấp quyền thực thi
+Sửa: chạy lệnh "chmod +x {đường dẫn tới file cần thực thi}" 
